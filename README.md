@@ -1,42 +1,90 @@
 # MediKiosk
 
-## Running locally
+MediKiosk is a React and Vite based patient assistant prototype exploring AI-assisted patient information collection and analysis.
 
-```powershell
-npm install
-npm run dev
-```
+## Overview
 
-## Patient session persistence
+MediKiosk is designed to help structure patient information collection through an interactive interface.
 
-Patient registration is kept in the browser's local storage. Refreshing the app or returning to the landing page shows **Continue My Session** rather than silently ending a patient session. This is prototype browser storage, not a secure clinical record store.
+The project explores how adaptive questioning and previous patient information can be used to support a more organized understanding of a patient's situation.
 
-## Gemini Live voice intake
+> Note: MediKiosk is a prototype for exploration and is not intended to provide medical diagnosis.
 
-The case-taking screen keeps its local clinical question flow as a fallback. When Gemini Live is configured, **Hear question** speaks a concise symptom-focused question and **Start speaking** records a live microphone response. Gemini output is never displayed as a diagnosis.
+## Problem
 
-1. Copy `.env.example` to `.env.local`.
-2. In production, supply a backend-generated short-lived token as `VITE_GEMINI_LIVE_TOKEN`.
-3. For a local demo only, use `VITE_GEMINI_API_KEY`.
-4. Restart the dev server after editing `.env.local`.
+In a healthcare setting, incomplete patient information, symptoms, medical history, and previous records can make it difficult to understand a patient's situation.
 
-Never deploy a long-lived API key in browser code. Gemini recommends ephemeral tokens for browser connections: [official token guidance](https://ai.google.dev/gemini-api/docs/live-api/ephemeral-tokens). This integration follows Gemini's WebSocket and 16 kHz PCM audio requirements: [official WebSocket guide](https://ai.google.dev/gemini-api/docs/live-api/get-started-websocket).
+MediKiosk explores a more structured approach to collecting and organizing patient information before it is reviewed by a doctor.
 
----
+## Features
 
-# React + Vite
+- Adaptive patient questioning concept
+- Patient information collection
+- Exploration of previous patient record analysis
+- Conversational interaction concept
+- Responsive user interface
+- Doctor-oriented information presentation concept
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Tech Stack
 
-Currently, two official plugins are available:
+- React
+- Vite
+- JavaScript
+- CSS
+- Gemini API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## My Contribution
 
-## React Compiler
+### Frontend / UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+My contribution to this project focused on the frontend and user interface.
 
-## Expanding the Oxlint configuration
+I worked on:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- UI design
+- Patient information forms
+- Question display interface
+- Responsive design
+- Frontend structure and user experience
+
+The project was developed as a team project with:
+
+- Pankaj Kumar
+- Nitish
+- Aniket
+
+## Current Status
+
+**Basic Prototype**
+
+The project is currently in the prototype stage.
+
+Some planned functionality, including concise summary generation, still needs improvement.
+
+## Challenges
+
+During development, the main challenges included:
+
+- Designing a clear patient information flow
+- Creating a responsive and accessible interface
+- Coordinating development between multiple team members
+- Improving the reliability of AI-assisted functionality
+- Improving patient-record analysis and summary generation
+
+## Future Improvements
+
+Planned improvements include:
+
+- Improve previous patient-record analysis
+- Improve summary generation
+- Improve UI/UX
+- Improve API reliability
+- Improve overall patient information workflow
+- Add more refined accessibility features
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Pankaj4746/medikiosk-patient-assistant.git
